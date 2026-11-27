@@ -1,9 +1,9 @@
 cask "simple-capture" do
   version "0.1.0"
-  sha256 "0eda8553595191708def015483eeb7bf02e5c7b579d4ea299d70f4f2a8b94d1f"
+  sha256 "b321f62423aad9a9cd4600f40398cd7ff33c8a55d89a5a99d7b8970f8c1e00fe"
 
-  url "https://github.com/thtmnisamnstr/simple-capture/releases/download/v#{version}/Simple.Capture_#{version}_aarch64.dmg"
-  name "Simple Capture"
+  url "https://github.com/thtmnisamnstr/simple-capture/releases/download/v#{version}/simple-capture_#{version}_aarch64.dmg"
+  name "simple-capture"
   desc "Screen recorder and video editor"
   homepage "https://github.com/thtmnisamnstr/simple-capture"
 
@@ -15,7 +15,7 @@ cask "simple-capture" do
   depends_on arch: :arm64
   depends_on macos: :sonoma
 
-  app "Simple Capture.app"
+  app "simple-capture.app"
 
   uninstall quit: "com.simplecapture.desktop"
 

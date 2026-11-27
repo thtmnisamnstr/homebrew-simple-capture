@@ -1,6 +1,6 @@
-# Homebrew tap for Simple Capture
+# Homebrew tap for simple-capture
 
-[Simple Capture](https://github.com/thtmnisamnstr/simple-capture) is a screen recorder and video editor for macOS. Everything stays on your Mac.
+[simple-capture](https://github.com/thtmnisamnstr/simple-capture) is a screen recorder and video editor for macOS. Everything stays on your Mac.
 
 ## Install
 
@@ -12,7 +12,7 @@ brew install --cask thtmnisamnstr/simple-capture/simple-capture
 
 ## Upgrade
 
-`brew upgrade` (or `brew upgrade --cask simple-capture`). This tap follows each Simple Capture release within about an hour.
+`brew upgrade` (or `brew upgrade --cask simple-capture`). This tap follows each simple-capture release within about an hour.
 
 ## Uninstall
 
@@ -20,6 +20,6 @@ brew install --cask thtmnisamnstr/simple-capture/simple-capture
 brew uninstall --cask simple-capture
 ```
 
-Add `--zap` to also remove settings, logs and caches. Recordings in `~/Movies/Simple Capture` are never touched.
+Add `--zap` to also remove settings, logs and caches. Recordings in `~/Movies/simple-capture` are never touched.
 
-Already installed Simple Capture from the DMG? Run `brew install --cask --force thtmnisamnstr/simple-capture/simple-capture`.
+Already installed simple-capture from the DMG? Run `brew install --cask --force thtmnisamnstr/simple-capture/simple-capture`.

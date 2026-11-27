@@ -57,7 +57,7 @@ jobs:
             echo "::error::Unexpected release tag $tag"
             exit 1
           fi
-          name="Simple.Capture_${version}_aarch64.dmg"
+          name="simple-capture_${version}_aarch64.dmg"
           digest=$(jq -r --arg n "$name" '.assets[] | select(.name == $n) | (.digest // "none")' <<<"$rel")
           if [ -z "$digest" ]; then
             echo "::error::Release $tag has no asset named $name"
@@ -102,7 +102,7 @@ jobs:
 
       - name: Download the DMG and check its checksum
         run: |
-          url="https://github.com/$UPSTREAM/releases/download/v$VERSION/Simple.Capture_${VERSION}_aarch64.dmg"
+          url="https://github.com/$UPSTREAM/releases/download/v$VERSION/simple-capture_${VERSION}_aarch64.dmg"
           curl -fsSL --retry 3 -o "$RUNNER_TEMP/sc.dmg" "$url"
           sha256=$(shasum -a 256 "$RUNNER_TEMP/sc.dmg" | cut -d' ' -f1)
           if [ "$API_SHA256" != none ] && [ "$sha256" != "$API_SHA256" ]; then
@@ -129,7 +129,7 @@ jobs:
       - name: Install, check Gatekeeper, uninstall
         run: |
           brew install --cask "$CASK"
-          app="/Applications/Simple Capture.app"
+          app="/Applications/simple-capture.app"
           codesign --verify --deep --strict "$app"
           xcrun stapler validate "$app"
           spctl --assess --type execute -vv "$app" 2>&1 | tee "$RUNNER_TEMP/spctl.txt"

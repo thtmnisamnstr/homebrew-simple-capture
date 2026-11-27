@@ -29,7 +29,7 @@ jobs:
           HOMEBREW_NO_AUTO_UPDATE: "1"
         run: |
           brew install --cask thtmnisamnstr/simple-capture/simple-capture
-          app="/Applications/Simple Capture.app"
+          app="/Applications/simple-capture.app"
           codesign --verify --deep --strict "$app"
           xcrun stapler validate "$app"
           spctl --assess --type execute -vv "$app" 2>&1 | tee "$RUNNER_TEMP/spctl.txt"
